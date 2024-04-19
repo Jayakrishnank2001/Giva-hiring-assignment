@@ -3,9 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { UserData } from '../models/users';
 import { Observable, map } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 
 export class FireStoreService {
 

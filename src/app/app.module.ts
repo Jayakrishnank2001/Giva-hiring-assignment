@@ -7,6 +7,7 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { environments } from 'src/environments/environments';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { FireStoreService } from './service/fire-store.service';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { MaterialModule } from './material/material.module';
     AngularFireModule.initializeApp(environments.firebaseConfig),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [FireStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
