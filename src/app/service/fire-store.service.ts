@@ -29,12 +29,11 @@ export class FireStoreService {
   }
 
   updateDisabledStatus(user: UserData[string]) {
-    this.fireStore.collection('users', ref => ref.where('name', '==', user.name))
+    this.fireStore.collection('users', ref => ref.where('mail', '==', user.mail))
       .get()
       .subscribe(querySnapshot => {
         querySnapshot.forEach(doc => {
-          const value = !user.disabled
-          doc.ref.update({ disabled: value });
+          doc.ref.update({ disabled: !user.disabled });
         });
       });
   }
