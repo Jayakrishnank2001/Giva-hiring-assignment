@@ -1,0 +1,58 @@
+.main-div {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #0e0d2b, #0c0b36);
+    height: 100vh;
+    text-align:center;
+  }
+
+  h1{
+    margin: 70px 0px 50px 0px;
+    font-size: xx-large;
+    color: rgb(126, 130, 145);
+    text-decoration: underline;
+  }
+
+  mat-table{
+    width: 1150px;
+    background-color: #08081f;
+    border-radius: 1em;
+    overflow: hidden;
+
+  }
+
+  .createPlan-btn{
+     margin-top: 90px;
+     margin-left: 50px;
+  }
+
+  mat-header-cell{
+    height: 5em;
+    border-color: rgb(72, 71, 71);
+    color: rgb(187, 187, 187);
+    justify-content: center;
+  }
+
+  mat-cell{
+    height: 5em;
+    border-color: rgb(72, 71, 71);
+    color: rgb(187, 187, 187);
+    justify-content: center;
+  }
+
+  .delete-icon,
+  .edit-icon{
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 600px) {
+    .mat-elevation-z8,
+    mat-header-cell,
+    mat-cell {
+      width: 90%;
+      height: 10%;
+      font-size: xx-small;
+      white-space: normal; /* Allow text wrapping for small screens */
+    }
+  }

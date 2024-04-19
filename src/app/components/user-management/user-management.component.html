@@ -1,1 +1,42 @@
-<p>user-management works!</p>
+<div class="main-div">
+    <div class="table-div">
+        <h1>Giva User Management</h1>
+        <mat-table [dataSource]="allUsers" class="mat-elevation-z8">
+    
+            <ng-container matColumnDef="no">
+                <mat-header-cell *matHeaderCellDef>No.</mat-header-cell>
+                <mat-cell *matCellDef="let i = index" class="data">{{ i + 1 }}</mat-cell>
+            </ng-container>            
+    
+            <ng-container matColumnDef="username" class="heading">
+                <mat-header-cell *matHeaderCellDef>Username</mat-header-cell>
+                <mat-cell *matCellDef="let user">{{user.name}}</mat-cell>
+            </ng-container>
+    
+            <ng-container matColumnDef="mail" class="heading">
+                <mat-header-cell *matHeaderCellDef>Mail</mat-header-cell>
+                <mat-cell *matCellDef="let user">
+                    <p>{{user.mail}}</p>
+                </mat-cell>
+            </ng-container>
+    
+            <ng-container matColumnDef="roles" class="heading">
+                <mat-header-cell *matHeaderCellDef>Roles</mat-header-cell>
+                <mat-cell *matCellDef="let user">{{ user.roles }}</mat-cell>      
+             </ng-container>
+    
+            <ng-container matColumnDef="actions" class="heading">
+                <mat-header-cell *matHeaderCellDef>Disabled</mat-header-cell>
+                <mat-cell *matCellDef="let user">
+                    <button mat-raised-button color="primary" *ngIf="!user.disabled" (click)="changeDisableStatus(user)">{{user.disabled}}</button>
+                    <button mat-raised-button color="warn" *ngIf="user.disabled" (click)="changeDisableStatus(user)">{{user.disabled}}</button>
+                </mat-cell>
+            </ng-container>
+    
+            <mat-header-row *matHeaderRowDef="['no', 'username', 'mail', 'roles', 'actions']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['no', 'username', 'mail', 'roles', 'actions']"></mat-row>
+        </mat-table>
+    </div>
+    
+</div>
+
