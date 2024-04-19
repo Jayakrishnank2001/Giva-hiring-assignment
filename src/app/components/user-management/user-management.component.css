@@ -21,11 +21,6 @@
 
   }
 
-  .createPlan-btn{
-     margin-top: 90px;
-     margin-left: 50px;
-  }
-
   mat-header-cell{
     height: 5em;
     border-color: rgb(72, 71, 71);
@@ -40,19 +35,14 @@
     justify-content: center;
   }
 
-  .delete-icon,
-  .edit-icon{
-    margin-right: 10px;
-    cursor: pointer;
-  }
-
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1400px) {
     .mat-elevation-z8,
     mat-header-cell,
     mat-cell {
-      width: 90%;
-      height: 10%;
-      font-size: xx-small;
-      white-space: normal; /* Allow text wrapping for small screens */
+        width: 90%;
+        height: auto; 
+        font-size: small;
+        white-space: normal; 
+        display: block;
     }
   }
