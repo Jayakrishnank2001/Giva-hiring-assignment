@@ -1,0 +1,22 @@
+{
+    "user1": {
+      "mail": "shalini@giva.co",
+      "name": "Shalini",
+      "disabled": false,
+      "roles": ["Inventory View", "Design"]
+    },
+    "user2": {
+      "mail": "shima@giva.co",
+      "name": "Shima",
+      "disabled": true,
+      "roles": ["Discount"]
+    },
+    "user3": {
+      "mail": "rishabh@giva.co",
+      "name": "Rishabh",
+      "disabled": true,
+      "roles": ["Admin"]
+    }
+  }
+  
+  
