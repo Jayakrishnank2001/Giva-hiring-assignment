@@ -46,12 +46,14 @@ export class UserManagementComponent implements OnInit{
       cancelButtonText: 'No'
     }).then(result => {
       if (result.isConfirmed) {
-        user['disabled']=!user['disabled']
         this.fireService.updateDisabledStatus(user)
         this.snackBar.open('Disabled status changed', 'Close', {
           duration: 5000,
           verticalPosition:'top'
         })
+        setTimeout(() => {
+          this.fetchUsers()
+        },200)
       }
     })
   }
