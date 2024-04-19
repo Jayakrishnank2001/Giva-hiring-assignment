@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FireStoreService } from 'src/app/services/fire-store.service';
+import { FireStoreService } from 'src/app/service/fire-store.service';
 import users from '../../../assets/users.json';
 import { UserData } from 'src/app/models/users';
 import Swal from 'sweetalert2';
